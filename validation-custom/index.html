@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フォームのバリテーション</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <p class="eyebrow">jQuery Practice</p>
+        <h1>Form Validation</h1>
+        <p class="subtitle">必要な項目を入力して送信してください。</p>
+    </header>
+
+    <main>
+        <form action="form.php" method="post" novalidate>
+            <section class="form-section" id="textSection">
+                <div class="section-heading">
+                    <label for="text">Text</label>
+                    <span class="required">Required</span>
+                </div>
+                <p class="hint">テキストを入力してください。</p>
+                <p class="alert">テキストを入力してください。</p>
+                <input type="text" id="text" name="text" value="" placeholder="Enter text...">
+            </section>
+
+            <section class="form-section" id="radioSection">
+                <div class="section-heading">
+                    <span>Radio</span>
+                    <span class="required">Required</span>
+                </div>
+                <p class="hint">1つ選択してください。</p>
+                <p class="alert">ラジオボタンを1つ選択してください。</p>
+                <div class="choice-group">
+                    <input type="radio" id="radio1" name="radio" value="Radio1">
+                    <label for="radio1">Radio1</label>
+
+                    <input type="radio" id="radio2" name="radio" value="Radio2">
+                    <label for="radio2">Radio2</label>
+
+                    <input type="radio" id="radio3" name="radio" value="Radio3">
+                    <label for="radio3">Radio3</label>
+                </div>
+            </section>
+
+            <section class="form-section" id="checkboxSection">
+                <div class="section-heading">
+                    <span>Checkbox</span>
+                    <span class="required">3 or more</span>
+                </div>
+                <p class="hint">3つ以上選択してください。</p>
+                <p class="alert">チェックボックスを3つ以上選択してください。</p>
+                <div class="choice-group checkbox-group">
+                    <input type="checkbox" id="checkbox1" name="checkbox" value="Checkbox1">
+                    <label for="checkbox1">Checkbox1</label>
+
+                    <input type="checkbox" id="checkbox2" name="checkbox" value="Checkbox2">
+                    <label for="checkbox2">Checkbox2</label>
+
+                    <input type="checkbox" id="checkbox3" name="checkbox" value="Checkbox3">
+                    <label for="checkbox3">Checkbox3</label>
+
+                    <input type="checkbox" id="checkbox4" name="checkbox" value="Checkbox4">
+                    <label for="checkbox4">Checkbox4</label>
+
+                    <input type="checkbox" id="checkbox5" name="checkbox" value="Checkbox5">
+                    <label for="checkbox5">Checkbox5</label>
+                </div>
+            </section>
+
+            <section class="form-section" id="selectSection">
+                <div class="section-heading">
+                    <label for="select">Select</label>
+                    <span class="required">Required</span>
+                </div>
+                <p class="hint">項目を1つ選択してください。</p>
+                <p class="alert">選択項目を選んでください。</p>
+                <select id="select" name="select">
+                    <option value="none">--- 選択してください ---</option>
+                    <option value="Select1">Select1</option>
+                    <option value="Select2">Select2</option>
+                    <option value="Select3">Select3</option>
+                </select>
+            </section>
+
+            <section class="form-section" id="textareaSection">
+                <div class="section-heading">
+                    <label for="textarea">TextArea</label>
+                    <span class="required">Required</span>
+                </div>
+                <p class="hint">自由入力欄です。</p>
+                <p class="alert">テキストエリアを入力してください。</p>
+                <textarea id="textarea" name="textarea" placeholder="Write something..."></textarea>
+            </section>
+
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Form Validation Practice</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
